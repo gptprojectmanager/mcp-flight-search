@@ -1,6 +1,10 @@
 # MCP Flight Search
 
-A flight search service built with MCP (Model Context Protocol).
+A flight search service built with Model Context Protocol (MCP). This service demonstrates how to implement MCP tools for flight search capabilities.
+
+## What is Model Context Protocol?
+
+The Model Context Protocol (MCP) is a standard developed by Anthropic that enables AI models to use tools by defining a structured format for tool descriptions, calls, and responses. This project implements MCP tools that can be used by Claude and other MCP-compatible models.
 
 ## Installation
 
@@ -14,7 +18,7 @@ pip install -e .
 
 ## Usage
 
-Start the server:
+Start the MCP server:
 
 ```bash
 # Using the command-line entry point
@@ -38,15 +42,23 @@ export SERP_API_KEY="your-api-key-here"
 
 ## Features
 
-- Search for flights using SerpAPI Google Flights
+- MCP-compliant tools for flight search functionality
+- Integration with SerpAPI Google Flights
 - Support for one-way and round-trip flights
 - Rich logging with structured output
 - Modular, maintainable code structure
 
-## API Tools
+## MCP Tools
 
-- `search_flights_tool`: Search for flights between airports
-- `server_status`: Check if the server is running
+This package provides the following Model Context Protocol tools:
+
+- `search_flights_tool`: Search for flights between airports with parameters:
+  - `origin`: Departure airport code (e.g., ATL, JFK)
+  - `destination`: Arrival airport code (e.g., LAX, ORD)
+  - `outbound_date`: Departure date (YYYY-MM-DD)
+  - `return_date`: Optional return date for round trips (YYYY-MM-DD)
+
+- `server_status`: Check if the MCP server is running
 
 ## Project Structure
 
@@ -65,24 +77,16 @@ mcp-flight-search/
 │   ├── utils/
 │   │   ├── __init__.py          # Utils package init
 │   │   └── logging.py           # Logging configuration
-│   └── server.py                # MCP server setup and tools
+│   └── server.py                # MCP server setup and tool registration
 ├── main.py                      # Main entry point
 ├── pyproject.toml               # Python packaging configuration
 ├── LICENSE                      # MIT License
 └── README.md                    # Project documentation
 ```
 
-## Building and Publishing
+## Author
 
-Build the package:
-```bash
-python -m build
-```
-
-Upload to PyPI:
-```bash
-python -m twine upload dist/*
-```
+For more articles on AI/ML and Generative AI, follow me on Medium: https://medium.com/@arjun-prabhulal
 
 ## License
 
