@@ -10,11 +10,10 @@ readme = "README.md"
 authors = [
     {name = "Arjun Prabhulal"}
 ]
-license = {text = "MIT"}
+license = "MIT"
 requires-python = ">=3.7"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
 dependencies = [
@@ -33,4 +32,7 @@ dependencies = [
 mcp-flight-search = "mcp_flight_search.server:main"
 
 [tool.setuptools]
-packages = ["mcp_flight_search"] 
+packages = ["mcp_flight_search", 
+            "mcp_flight_search.models", 
+            "mcp_flight_search.services", 
+            "mcp_flight_search.utils"] 
