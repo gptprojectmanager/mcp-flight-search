@@ -1,4 +1,7 @@
 # MCP Flight Search
+<a href="https://glama.ai/mcp/servers/@arjunprabhulal/mcp-flight-search">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@arjunprabhulal/mcp-flight-search/badge" />
+</a>
 
 A flight search service built with Model Context Protocol (MCP). This service demonstrates how to implement MCP tools for flight search capabilities.
 
