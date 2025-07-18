@@ -12,4 +12,4 @@ SERP_API_KEY = os.getenv("SERP_API_KEY")
 
 # Default server settings
 DEFAULT_PORT = 3001
-DEFAULT_CONNECTION_TYPE = "http"  # Alternative: "stdio" 
+DEFAULT_CONNECTION_TYPE = "stdio"  # Fixed: MCP standard is stdio 
